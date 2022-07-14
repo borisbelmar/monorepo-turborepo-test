@@ -17,11 +17,13 @@ export default function Button({
   children,
   type,
   size,
-  fullwidth
+  fullwidth,
+  onClick
 }) {
   return (
     <button
       type={type}
+      onClick={onClick}
       className={clsx(
         'bg-primary-500 text-white rounded hover:bg-primary-600 transition duration-150',
         getSizeClasses(size),
@@ -34,14 +36,16 @@ export default function Button({
 }
 
 Button.propTypes = {
-  type: PropTypes.oneOf('button', 'submit', 'reset'),
+  type: PropTypes.oneOf(['button', 'submit', 'reset']),
   children: PropTypes.node.isRequired,
   size: PropTypes.oneOf(['sm', 'lg']),
-  fullwidth: PropTypes.bool
+  fullwidth: PropTypes.bool,
+  onClick: PropTypes.func
 }
 
 Button.defaultProps = {
   type: 'button',
   size: undefined,
-  fullwidth: false
+  fullwidth: false,
+  onClick: undefined
 }

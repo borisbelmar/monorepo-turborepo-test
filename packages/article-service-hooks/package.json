@@ -1,0 +1,32 @@
+{
+  "name": "article-service-hooks",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "license": "MIT",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup ./index.js --format esm,cjs --external react",
+    "dev": "tsup ./index.js --format esm,cjs --external react --watch",
+    "lint": "TIMING=1 eslint . --fix",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "peerDependencies": {
+    "react": ">=17"
+  },
+  "devDependencies": {
+    "eslint": "^8.19.0",
+    "eslint-config-react": "*",
+    "react": "^18.2.0",
+    "tsup": "^5.10.1"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "config": "*",
+    "auth-context": "*",
+    "react-query": "^3.39.1"
+  }
+}

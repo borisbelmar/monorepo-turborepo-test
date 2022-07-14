@@ -10,6 +10,7 @@ module.exports = {
     }
   },
   rules: {
-    'react/button-has-type': 'off'
+    'react/button-has-type': 'off',
+    'react/jsx-one-expression-per-line': 'off'
   }
 }

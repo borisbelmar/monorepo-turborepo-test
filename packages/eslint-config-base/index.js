@@ -9,10 +9,11 @@ module.exports = {
   },
   parserOptions: {
     sourceType: "module",
-    ecmaVersion: 6
+    ecmaVersion: 2020
   },
   rules: {
     semi: ["error", "never"],
-    "comma-dangle": ["error", "never"]
+    "comma-dangle": ["error", "never"],
+    "no-underscore-dangle": ["error", { allow: ["_id"] }],
   }
 }

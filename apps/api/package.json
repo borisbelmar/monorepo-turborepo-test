@@ -1,0 +1,32 @@
+{
+  "name": "api",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/index.js",
+  "type": "module",
+  "dependencies": {
+    "@koa/cors": "3.1.0",
+    "@koa/router": "10.1.1",
+    "bcryptjs": "2.4.3",
+    "dotenv": "10.0.0",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "8.5.1",
+    "koa": "2.13.3",
+    "koa-body": "4.2.0",
+    "koa-morgan": "1.0.1",
+    "mongoose": "6.0.8",
+    "slugify": "^1.6.5"
+  },
+  "scripts": {
+    "start": "node -r dotenv/config ./dist/index.js",
+    "dev": "PORT=4001 nodemon -r dotenv/config ./src/index.js",
+    "lint": "eslint \"./src/**/*.js\"",
+    "build": "tsup ./src/index.js --format esm,cjs"
+  },
+  "devDependencies": {
+    "eslint": "^8.8.0",
+    "eslint-config-base": "*",
+    "nodemon": "2.0.13",
+    "tsup": "^5.10.1"
+  }
+}
